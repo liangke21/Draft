@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="bb4c72c2-26e2-4144-91e8-878ba35b66ca" name="变更" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="E:/Android/maven/apache-maven-3.3.9-bin/apache-maven-3.3.9/bin" />
+        <option name="userSettingsFile" value="E:\Android\maven\apache-maven-3.3.9-bin\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="22UQVJ6s3GqxVSK5sEkUC2qBeRx" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="android.sdk.path" value="E:/Android/SDK" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="jprofiler" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="强引用" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PhantomReferenceTest.testPhantomReferenceWithQueue">
+    <configuration name="StrongReferenceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="强引用.StrongReferenceTest" />
+      <module name="javaReference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="强引用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PhantomReferenceTest.testPhantomReferenceWithQueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaReference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="虚引用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="虚引用" />
+      <option name="MAIN_CLASS_NAME" value="虚引用.PhantomReferenceTest" />
+      <option name="METHOD_NAME" value="testPhantomReferenceWithQueue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SoftReferenceTest.testSoftReferenceWithoutQueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaReference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="软引用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="软引用" />
+      <option name="MAIN_CLASS_NAME" value="软引用.SoftReferenceTest" />
+      <option name="METHOD_NAME" value="testSoftReferenceWithoutQueue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StrongReferenceTest.testStrongReference" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaReference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="强引用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="强引用" />
+      <option name="MAIN_CLASS_NAME" value="强引用.StrongReferenceTest" />
+      <option name="METHOD_NAME" value="testStrongReference" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WeakReferenceTest.testWeakReferenceWithoutQueue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="javaReference" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="弱引用.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="弱引用" />
+      <option name="MAIN_CLASS_NAME" value="弱引用.WeakReferenceTest" />
+      <option name="METHOD_NAME" value="testWeakReferenceWithoutQueue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PhantomReferenceTest.testPhantomReferenceWithQueue" />
+        <item itemvalue="JUnit.WeakReferenceTest.testWeakReferenceWithoutQueue" />
+        <item itemvalue="JUnit.SoftReferenceTest.testSoftReferenceWithoutQueue" />
+        <item itemvalue="JUnit.StrongReferenceTest.testStrongReference" />
+        <item itemvalue="应用程序.StrongReferenceTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="bb4c72c2-26e2-4144-91e8-878ba35b66ca" name="变更" comment="" />
+      <created>1639889709847</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1639889709847</updated>
+    </task>
+    <servers />
+  </component>
+</project>
