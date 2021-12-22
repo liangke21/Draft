@@ -5,7 +5,7 @@
 
 
 #define NUM_THREADS 5
-
+//<editor-fold desc="" >
 // 线程的运行函数
 void * say_hello(void *pVoid)
 {
@@ -13,7 +13,7 @@ void * say_hello(void *pVoid)
     std::cout << "在线程里运行！";
     return nullptr;
 }
-
+//</editor-fold>
 int main()
 {
     // 定义线程的 id 变量，多个变量使用数组
