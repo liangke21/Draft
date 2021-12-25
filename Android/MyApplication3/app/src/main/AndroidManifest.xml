@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <!-- 基础权限如下: -->
+    <!-- Normal Protection -->
+    <!-- 访问网络-权限级别Protection/Normal-AndroidManifest.xml中声明 即可获取权限 -->
+    <!--网络权限-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <!-- Normal Protection -->
+    <!-- 获取wifi状态-权限级别Protection/Normal-AndroidManifest.xml中声明 即可获取权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Normal Protection -->
+    <!-- 获取网络状态状态-权限级别Protection/Normal-AndroidManifest.xml中声明 即可获取权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  <!-- // <uses-permission android:name="ACCESS_D"-->
+    <!-- Dangerous permission group :PHONE -->
+    <!-- 读取手机信息/拨打电话-权限级别Dangerous-AndroidManifest.xml中声明  还需要代码运行时动态检测和申请 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- 二维码登录相关权限声明 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <application
+        android:name="OauthDemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="m">
+        <activity
+            android:name=".MainActivity2"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.baidu.oauth.sdk.view.WebViewActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="portrait"
+            android:theme="@style/OauthSdkTheme"
+            android:windowSoftInputMode="stateHidden" />
+
+    </application>
+
+</manifest>
