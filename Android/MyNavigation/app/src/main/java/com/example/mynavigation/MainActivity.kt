@@ -18,6 +18,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mynavigation.databinding.ActivityMainBinding
+import com.example.mynavigation.ui.home.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
@@ -57,21 +58,16 @@ class MainActivity : AppCompatActivity() {
 
         navView.setupWithNavController(navController)
 
-/*        navView.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {
+        navView.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
                 Log.d("NavigationItem", item.groupId.toString() + " title " + item.title+" itemId "+item.itemId+" groupId"+item.groupId)
-                binding.drawerLayout.openDrawer(Gravity.RIGHT)
-                binding.drawerLayout.closeDrawer(binding.navView)
+             //   binding.drawerLayout.
+                manageFragment()
+    /*            binding.drawerLayout.openDrawer(Gravity.RIGHT)
+                binding.drawerLayout.closeDrawer(binding.navView)*/
                 return true
             }
-        })*/
-
-         val navViewView= navView.getHeaderView(0)
-        navViewView.findViewById<Button>(R.id.nav_gallery).setOnClickListener {
-            binding.drawerLayout.openDrawer(Gravity.RIGHT)
-            binding.drawerLayout.closeDrawer(binding.navView)
-            Log.d("NavigationItem"," ")
-        }
+        })
 
         drawer()
 
@@ -113,6 +109,18 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+    }
+
+    fun manageFragment(){
+        val homeMain= HomeFragment()
+        val transaction = getSupportFragmentManager()
+            .beginTransaction();
+        transaction.add(R.id.app_bar_main2, homeMain);
+        // 把当前Fragment添加至回退栈，通过返回键返回时可以导航到上一个Fragment状态
+        transaction.addToBackStack(null);
+        // 提交
+        transaction.commit();
+
     }
 
 }
