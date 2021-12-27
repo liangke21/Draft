@@ -1,2 +1,0 @@
-com/example/mytransition/BuildConfig.java
- com.example.mytransition.BuildConfig
