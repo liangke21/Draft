@@ -2,10 +2,10 @@ package com.example.mynavigation.ui.home
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.TextView
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -20,7 +20,7 @@ class HomeFragment : Fragment() {
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-
+private lateinit var mActivity :AppCompatActivity
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -31,17 +31,35 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
-
-        val textView: TextView = binding.textHome
+       mActivity = activity as AppCompatActivity
+/*        val textView: TextView = binding.textHome
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
-        })
+        })*/
+
+        mActivity.setSupportActionBar(binding.toolbar)
+        val actionBar = mActivity.supportActionBar
+        actionBar?.title = "dddddddddd"
+        actionBar?.setDisplayShowTitleEnabled(true);
+        actionBar?.setDisplayHomeAsUpEnabled(true)
+
+
         return root
     }
 
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if(item.getItemId() == android.R.id.home) {
+            Log.e("NavigationItem22", item.getItemId().toString())
+            return true;
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
     override fun onDestroyView() {
         super.onDestroyView()
-        Log.e("NavigationItem","销毁了吗")
+        Log.e("NavigationItem", "销毁了吗")
         _binding = null
     }
 }

@@ -17,6 +17,8 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.NavDestination
 import com.example.mynavigation.databinding.ActivityMainBinding
 import com.example.mynavigation.ui.home.HomeFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -41,30 +43,37 @@ class MainActivity : AppCompatActivity() {
             binding.drawerLayout.closeDrawer(Gravity.RIGHT)//点击关闭右侧抽屉
             binding.drawerLayout.openDrawer(binding.navView)//关闭右侧抽屉的同时在打开左侧抽屉
         }
-        val drawerLayout: DrawerLayout = binding.drawerLayout
+      //  val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
+/*        val navController = findNavController(R.id.nav_host_fragment_content_main)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
 
 
-
-       appBarConfiguration = AppBarConfiguration(
+        appBarConfiguration = AppBarConfiguration(
             setOf(
                 R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
             ), drawerLayout
         )
+
+        navController.addOnDestinationChangedListener(object:NavController.OnDestinationChangedListener{
+            override fun onDestinationChanged(controller: NavController, destination: NavDestination, arguments: Bundle?) {
+                Log.v("navController",destination.label.toString())
+            }
+        })
+
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        navView.setupWithNavController(navController)
+        navView.setupWithNavController(navController)*/
 
-        navView.setNavigationItemSelectedListener(object: NavigationView.OnNavigationItemSelectedListener {
+       navView.setNavigationItemSelectedListener(object : NavigationView.OnNavigationItemSelectedListener {
             override fun onNavigationItemSelected(item: MenuItem): Boolean {
-                Log.d("NavigationItem", item.groupId.toString() + " title " + item.title+" itemId "+item.itemId+" groupId"+item.groupId)
-             //   binding.drawerLayout.
+                Log.d("NavigationItem", item.groupId.toString() + " title " + item.title + " itemId " + item.itemId + " groupId" + item.groupId)
+                //   binding.drawerLayout.
+                binding.appBarMain2.visibility=View.VISIBLE
                 manageFragment()
-    /*            binding.drawerLayout.openDrawer(Gravity.RIGHT)
-                binding.drawerLayout.closeDrawer(binding.navView)*/
+                //*            binding.drawerLayout.openDrawer(Gravity.RIGHT)*//*
+                binding.drawerLayout.closeDrawer(binding.navView)
                 return true
             }
         })
@@ -85,7 +94,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("WrongConstant", "RtlHardcoded")
-    fun drawer(){
+    fun drawer() {
 
 
         binding.drawerLayout.openDrawer(binding.navView)
@@ -111,15 +120,11 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    fun manageFragment(){
-        val homeMain= HomeFragment()
-        val transaction = getSupportFragmentManager()
-            .beginTransaction();
-        transaction.add(R.id.app_bar_main2, homeMain);
-        // 把当前Fragment添加至回退栈，通过返回键返回时可以导航到上一个Fragment状态
-        transaction.addToBackStack(null);
-        // 提交
-        transaction.commit();
+    fun manageFragment() {
+        val homeMain = HomeFragment()
+        supportFragmentManager
+            .beginTransaction().setCustomAnimations(R.anim.right_enter, R.anim.right_exit).replace(R.id.app_bar_main2, homeMain).commit()
+        supportFragmentManager.executePendingTransactions()
 
     }
 
