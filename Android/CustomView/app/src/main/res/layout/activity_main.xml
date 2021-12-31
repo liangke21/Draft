@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  android:background="@color/purple_200"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity"
+  android:orientation="vertical">
+
+
+  <com.example.customview.PathView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    />
+
+  <com.example.customview.MusicButton
+    android:id="@+id/bb"
+    android:layout_width="wrap_content"
+    android:layout_height="100dp"
+    android:src="@drawable/aa"/>
+
+  <com.example.customview.MusicButtonLayout
+    android:id="@+id/tasks_view"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    app:circleColor="@color/colorAccent"
+    app:textSizeL="16sp"
+    app:ringBgColor="@color/white"
+    app:ringColor="#2196F3"
+    app:strokeWidthBackground="5dp"
+    app:strokeWidthL="5dp"/>
+</LinearLayout>
