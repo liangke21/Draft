@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--圆弧进度条-->
+  <declare-styleable name="BottomNavigationView">
+    <!--园半径-->
+    <attr name="circleRadius" format="dimension"/>
+    <!--线条粗细-->
+    <attr name="strokeWidthK" format="dimension"/>
+
+  </declare-styleable>
+  <!--圆弧进度条-->
+  <declare-styleable name="TasksCompletedView">
+    <!--进度字体-->
+    <attr name="textSizeL" format="dimension"/>
+    <!--外圆弧背景大小-->
+    <attr name="strokeWidthBackground" format="dimension"/>
+    <!--外圆弧内大小-->
+    <attr name="strokeWidthL" format="dimension"/>
+    <!--内圆颜色-->
+    <attr name="circleColor" format="color"/>
+    <attr name="ringColor" format="color"/>
+    <attr name="ringBgColor" format="color"/>
+    <!--背景里面的圆压缩-->
+    <attr name="bulgeRadius" format="dimension"/>
+    <!--圆背景-->
+    <attr name="backgroundL" format="color"/>
+
+  </declare-styleable>
+
+</resources>
