@@ -1,0 +1,4 @@
+
+include ':app'
+include ':aspectj'
+rootProject.name = "AOP技术使用"
