@@ -1,0 +1,4 @@
+
+[submodule "Android/activityfragment"]
+	path = Android/activityfragment
+	url = https://gitee.com/liangke25/activityfragment.git

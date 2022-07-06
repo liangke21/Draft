@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/ADraft/Android/MyBottomSheetState/app/src/main/res/layout/activity_main.xml" value="0.3428442028985507" />
         <entry key="..\:/ADraft/Android/MyBottomSheetState/app/src/main/res/layout/activity_main2.xml" value="0.1" />
+        <entry key="..\:/ADraft/Android/MyBottomSheetState/app/src/main/res/layout/bottom_sheet_behavior.xml" value="0.36614583333333334" />
+        <entry key="..\:/ADraft/Android/MyBottomSheetState/app/src/main/res/layout/layout_bottom_navigation_view.xml" value="0.36614583333333334" />
       </map>
     </option>
   </component>
@@ -13,5 +15,8 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="SuppressionsComponent">
+    <option name="suppComments" value="[]" />
   </component>
 </project>

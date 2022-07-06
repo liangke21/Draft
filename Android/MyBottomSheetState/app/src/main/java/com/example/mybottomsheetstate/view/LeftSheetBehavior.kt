@@ -11,6 +11,7 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout
 import androidx.customview.view.AbsSavedState
 
 open class LeftSheetBehavior<V : View> : CoordinatorLayout.Behavior<V>() {
+
 //<editor-fold desc="SavedState 交互变量" >
     /**
      * 状态

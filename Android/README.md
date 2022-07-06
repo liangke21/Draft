@@ -15,3 +15,7 @@
 ### UpdateApk 更新apk
 
 ### MyViewModeleSavedState  保存模块
+
+## Activityfragment 之间通讯
+
+## DrawerLayoutFullscreen 全屏抽屉
