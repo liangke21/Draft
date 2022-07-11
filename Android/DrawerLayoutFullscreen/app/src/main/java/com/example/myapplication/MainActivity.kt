@@ -1,8 +1,10 @@
 package com.example.myapplication
 
+import android.os.Build
 import android.os.Bundle
 import android.view.Menu
 import android.view.View
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -28,35 +31,44 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-
         val layoutParams = binding.navView.layoutParams
         layoutParams.width = applicationContext.resources.displayMetrics.widthPixels
         binding.navView.layoutParams = layoutParams
 
-
         val drawerLayout: DrawerLayout = binding.drawerLayout
 
+        drawerLayout.addDrawerListener(object : DrawerLayout.DrawerListener {
+            override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                println("偏移量 $slideOffset")
 
-            drawerLayout.addDrawerListener(object :DrawerLayout.DrawerListener{
-                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
-                    println("偏移量 $slideOffset")
-                    binding.appBarMain.aaa.scaleX=(1 - slideOffset / 8)
-                    binding.appBarMain.aaa.scaleY=(1 - slideOffset/ 8)
-                }
+                //缩放
+                /* binding.appBarMain.aaa.scaleX = (1 - slideOffset / 8)
+                 binding.appBarMain.aaa.scaleY = (1 - slideOffset / 8)*/
+                //平移
+                binding.appBarMain.aaa.scrollX = -(1080 * slideOffset).toInt()
 
-                override fun onDrawerOpened(drawerView: View) {
+            }
 
-                }
+            override fun onDrawerOpened(drawerView: View) {
 
-                override fun onDrawerClosed(drawerView: View) {
+            }
 
-                }
+            override fun onDrawerClosed(drawerView: View) {
 
-                override fun onDrawerStateChanged(newState: Int) {
+            }
 
-                }
-            })
+            override fun onDrawerStateChanged(newState: Int) {
 
+            }
+        })
+
+        if (Build.VERSION.SDK_INT > Build.VERSION_CODES.M) {
+            binding.appBarMain.aaa.setOnScrollChangeListener { v, scrollX, scrollY, oldScrollX, oldScrollY ->
+
+              println("平移回调  $scrollX")
+            }
+
+        }
 
 
         binding.appBarMain.fab.setOnClickListener { view ->
