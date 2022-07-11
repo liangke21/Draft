@@ -2,6 +2,7 @@ package com.example.myapplication
 
 import android.os.Bundle
 import android.view.Menu
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -34,6 +35,29 @@ class MainActivity : AppCompatActivity() {
 
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
+
+
+            drawerLayout.addDrawerListener(object :DrawerLayout.DrawerListener{
+                override fun onDrawerSlide(drawerView: View, slideOffset: Float) {
+                    println("偏移量 $slideOffset")
+                    binding.appBarMain.aaa.scaleX=(1 - slideOffset / 8)
+                    binding.appBarMain.aaa.scaleY=(1 - slideOffset/ 8)
+                }
+
+                override fun onDrawerOpened(drawerView: View) {
+
+                }
+
+                override fun onDrawerClosed(drawerView: View) {
+
+                }
+
+                override fun onDrawerStateChanged(newState: Int) {
+
+                }
+            })
+
+
 
         binding.appBarMain.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
